@@ -1,0 +1,44 @@
+log:
+  path: F://logs//push_dev_logs
+  level: INFO
+server:
+  port: 9090
+param:
+  uuid: ${random.uuid}
+spring:
+  datasource:
+    druid:
+      one:
+        url: jdbc:mysql://rm-uf6k42ke05jq7358so.mysql.rds.aliyuncs.com:3306/wx_db?allowMultiQueries=true&autoReconnect=true
+        username: root_top
+        password: root_Top
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+      two:
+        url: jdbc:mysql://rm-uf6k42ke05jq7358so.mysql.rds.aliyuncs.com:3306/wechat_test?allowMultiQueries=true&autoReconnect=true
+        username: root_top
+        password: root_Top
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
